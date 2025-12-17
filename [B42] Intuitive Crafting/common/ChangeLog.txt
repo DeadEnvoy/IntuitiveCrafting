@@ -1,0 +1,25 @@
+[ ALERT_CONFIG ]
+link1 = Workshop = https://steamcommunity.com/id/acrynos/myworkshopfiles/?appid=108600,
+[ ------ ]
+
+[ 0.8.8 ]
+- Fixed bugs related to 42.11.0.
+- Some fixes and improvements.
+[ ------ ]
+
+[ 0.8.9 ]
+- Fixed bugs related to 42.12.0.
+- Some fixes and improvements.
+[ ------ ]
+
+[ 0.8.10 ]
+- Minimum width requirements for windows have been removed.
+[ ------ ]
+
+[ 0.8.11 ]
+- Fixed a bug when changing the recipe display type in some workbenches.
+[ ------ ]
+
+[ 0.8.12 ]
+- Исправлена ванильная ошибка, позволяющая окнам крафта и строительства выходить за границы экрана.
+[ ------ ]
