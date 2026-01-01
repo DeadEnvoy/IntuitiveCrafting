@@ -20,6 +20,13 @@ link1 = Workshop = https://steamcommunity.com/id/acrynos/myworkshopfiles/?appid=
 - Fixed a bug when changing the recipe display type in some workbenches.
 [ ------ ]
 
-[ 0.8.12 ]
-- Исправлена ванильная ошибка, позволяющая окнам крафта и строительства выходить за границы экрана.
+[ 1.0.0 ]
+- The mod's logic has been completely rewritten (reduced from 11 files to 5).
+- Hovering over the crafting output now displays full item information (tooltip).
+- The displayed XP gain now accounts for all possible multipliers (Traits, Skill Books, Sandbox settings).
+- The visual separation between tools and items has been removed to save screen space.
+- The selected category and recipe are now remembered (state persistence).
+- Certain recipe categories added by other mods are now merged.
+- Added tooltips when hovering over filter options.
+- Removed the dependency on the Starlit library.
 [ ------ ]
