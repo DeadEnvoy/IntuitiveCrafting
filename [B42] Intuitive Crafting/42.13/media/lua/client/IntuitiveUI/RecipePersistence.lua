@@ -1,6 +1,5 @@
 require "IntuitiveUI/RecipeFilters"
 require "Entity/ISUI/CraftRecipe/ISRecipeScrollingListBox"
-require "Entity/ISUI/CraftRecipe/ISWidgetRecipeFilterPanel"
 require "Entity/ISUI/CraftRecipe/ISWidgetRecipesPanel"
 
 local original_ISRecipeScrollingListBox_addGroup = ISRecipeScrollingListBox.addGroup
