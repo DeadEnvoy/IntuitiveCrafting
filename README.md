@@ -37,4 +37,4 @@ I don't know, check it yourself. And if not, report it.
 ### 4. Will [...] feature be added?
 While I consider suggestions for improvements, I prefer to work on developing and implementing ideas independently.
 
-**Workshop ID:** [3567084868](https://steamcommunity.com/sharedfiles/filedetails/?id=3486217110) (IntuitiveCrafting)
+**Workshop ID:** [3486217110](https://steamcommunity.com/sharedfiles/filedetails/?id=3486217110) (IntuitiveCrafting)
