@@ -6,6 +6,5 @@ poster=poster_13.png
 icon=icon_13.png
 versionMin=42.13.0
 modversion=1.0.0
-require=\StarlitLibrary
 incompatible=\Neat_Crafting,\CraftingXPDisplay
 loadModAfter=\PZB42RUTranslation
