@@ -30,3 +30,8 @@ link1 = Workshop = https://steamcommunity.com/id/acrynos/myworkshopfiles/?appid=
 - Added tooltips when hovering over filter options.
 - Removed the dependency on the Starlit library.
 [ ------ ]
+
+[ 1.0.1 ]
+- All localization files migrated to the new format.
+- Experience gain display for recipes is no longer supported.
+[ ------ ]
