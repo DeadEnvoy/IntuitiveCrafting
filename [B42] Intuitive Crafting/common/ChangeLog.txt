@@ -35,3 +35,7 @@ link1 = Workshop = https://steamcommunity.com/id/acrynos/myworkshopfiles/?appid=
 - All localization files migrated to the new format.
 - Experience gain display for recipes is no longer supported.
 [ ------ ]
+
+[ 1.0.2 ]
+- Experience gain for recipes is now displayed again.
+[ ------ ]
