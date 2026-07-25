@@ -3,6 +3,7 @@ require "Entity/ISUI/BuildRecipe/ISBuildPanel"
 require "Entity/ISUI/CraftRecipe/ISWidgetRecipeFilterPanel"
 
 local FONT_HGT_SMALL = getTextManager():getFontHeight(UIFont.NewSmall)
+local BUTTON_HGT = FONT_HGT_SMALL + 6
 local UI_BORDER_SPACING, GAP = 5, 15
 
 local function getVisualWidth(tickbox)
@@ -41,7 +42,7 @@ local original_createChildren = ISWidgetRecipeFilterPanel.createChildren
 function ISWidgetRecipeFilterPanel:createChildren()
     original_createChildren(self)
 
-    self.tickBoxShowLearned = ISXuiSkin.build(self.xuiSkin, "S_NeedsAStyle", ISTickBox, 0, 0, 15, FONT_HGT_SMALL, "tickbox", self, ISWidgetRecipeFilterPanel.onShowLearnedClick)
+    self.tickBoxShowLearned = ISXuiSkin.build(self.xuiSkin, "S_NeedsAStyle", ISTickBox, 0, 0, BUTTON_HGT, BUTTON_HGT, "tickbox", self, ISWidgetRecipeFilterPanel.onShowLearnedClick)
     self.tickBoxShowLearned:initialise()
     self.tickBoxShowLearned:instantiate()
     self.tickBoxShowLearned.selected[1] = self.callbackTarget.filterShowLearned
@@ -49,7 +50,7 @@ function ISWidgetRecipeFilterPanel:createChildren()
     self.tickBoxShowLearned.tooltip = getText("IGUI_CraftingUI_ShowLearned_tooltip")
     self:addChild(self.tickBoxShowLearned)
 
-    self.tickBoxHasMaterials = ISXuiSkin.build(self.xuiSkin, "S_NeedsAStyle", ISTickBox, 0, 0, 15, FONT_HGT_SMALL, "tickbox", self, ISWidgetRecipeFilterPanel.onHasMaterialsClick)
+    self.tickBoxHasMaterials = ISXuiSkin.build(self.xuiSkin, "S_NeedsAStyle", ISTickBox, 0, 0, BUTTON_HGT, BUTTON_HGT, "tickbox", self, ISWidgetRecipeFilterPanel.onHasMaterialsClick)
     self.tickBoxHasMaterials:initialise()
     self.tickBoxHasMaterials:instantiate()
     self.tickBoxHasMaterials.selected[1] = self.callbackTarget.filterHasMaterials
@@ -57,7 +58,7 @@ function ISWidgetRecipeFilterPanel:createChildren()
     self.tickBoxHasMaterials.tooltip = getText("IGUI_CraftingUI_HasMaterials_tooltip")
     self:addChild(self.tickBoxHasMaterials)
 
-    self.tickBoxGrantsXP = ISXuiSkin.build(self.xuiSkin, "S_NeedsAStyle", ISTickBox, 0, 0, 15, FONT_HGT_SMALL, "tickbox", self, ISWidgetRecipeFilterPanel.onGrantsXPClick)
+    self.tickBoxGrantsXP = ISXuiSkin.build(self.xuiSkin, "S_NeedsAStyle", ISTickBox, 0, 0, BUTTON_HGT, BUTTON_HGT, "tickbox", self, ISWidgetRecipeFilterPanel.onGrantsXPClick)
     self.tickBoxGrantsXP:initialise()
     self.tickBoxGrantsXP:instantiate()
     self.tickBoxGrantsXP.selected[1] = self.callbackTarget.filterGrantsXP
