@@ -115,6 +115,7 @@ function ISWidgetRecipeFilterPanel:calculateLayout(_preferredWidth, _preferredHe
         end
         
         alignTarget:setY(y)
+        alignTarget:setWidth(getVisualWidth(alignTarget))
 
         local x = alignTarget:getX() + getVisualWidth(alignTarget) + GAP
 
