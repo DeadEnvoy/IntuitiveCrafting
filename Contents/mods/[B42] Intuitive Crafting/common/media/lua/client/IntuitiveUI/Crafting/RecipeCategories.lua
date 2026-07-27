@@ -205,6 +205,18 @@ function ISWidgetRecipeCategories:calculateLayout(_preferredWidth, _preferredHei
     self:setHeight(_preferredHeight); self:setInternalHeight(_preferredHeight)
 end
 
+function ISHandCraftPanel:refreshRecipeList(_forceRefresh)
+	if self:updateContainers(_forceRefresh) then
+		if self.seeAllRecipe then
+			self.logic:setRecipes(ScriptManager.instance:getAllCraftRecipes())
+		elseif self.recipeQuery then
+			self.logic:setRecipes(CraftRecipeManager.queryRecipes(self.recipeQuery))
+		else
+			self.logic:setRecipes(self.craftBench:getRecipes())
+		end
+	end
+end
+
 local original_filterRecipeList = ISHandCraftPanel.filterRecipeList
 function ISHandCraftPanel:filterRecipeList()
     local category = self._categoryString
