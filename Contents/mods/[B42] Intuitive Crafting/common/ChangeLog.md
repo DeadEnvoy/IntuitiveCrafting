@@ -2,9 +2,13 @@
 **UI**
 - Adjusted the width of the vanilla tickbox element area.
 
+**CONTROLLER**
+- Custom tickboxes now work with gamepad navigation.
+
 **FIXES**
 - Fixed tickbox sizes to match vanilla.
 - Fixed custom filters resetting the selected category when "Show All Recipes" was active with a hidden category selected.
+- Fixed the vanilla "Show All Versions" tickbox missing from gamepad navigation in the build menu.
 
 **LOCALIZATION**
 - Added localization for crafting UI elements: fluid amount suffix, crafting time, quantity label, and force-craft button. 
