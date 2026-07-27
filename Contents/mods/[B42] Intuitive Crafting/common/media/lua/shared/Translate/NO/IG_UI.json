@@ -46,5 +46,13 @@
 	"IGUI_CraftingUI_HasMaterials_tooltip": "Vis kun oppskrifter hvor du har minst én av de nødvendige gjenstandene.",
 
 	"IGUI_CraftingUI_GrantsXP": "Gir XP",
-	"IGUI_CraftingUI_GrantsXP_tooltip": "Vis kun oppskrifter som gir erfaringspoeng for ferdigheter."
+	"IGUI_CraftingUI_GrantsXP_tooltip": "Vis kun oppskrifter som gir erfaringspoeng for ferdigheter.",
+
+	"IGUI_CraftingUI_Quantity": "Mengde:",
+	"IGUI_CraftingUI_TimeRequired": "Tid kreves:",
+	"IGUI_CraftingUI_Minutes": "min",
+	"IGUI_CraftingUI_Seconds": "s",
+	"IGUI_CraftingUI_Max": "MAKS",
+	"IGUI_CraftingUI_ForceAction": "Tving",
+	"IGUI_CraftingUI_Liters": "L"
 }

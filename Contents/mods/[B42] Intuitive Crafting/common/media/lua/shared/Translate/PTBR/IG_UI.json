@@ -46,5 +46,13 @@
 	"IGUI_CraftingUI_HasMaterials_tooltip": "Mostrar apenas receitas para as quais você possui pelo menos um dos itens necessários.",
 
 	"IGUI_CraftingUI_GrantsXP": "Dá XP",
-	"IGUI_CraftingUI_GrantsXP_tooltip": "Mostrar apenas receitas que concedem pontos de experiência para as perícias do personagem."
+	"IGUI_CraftingUI_GrantsXP_tooltip": "Mostrar apenas receitas que concedem pontos de experiência para as perícias do personagem.",
+
+	"IGUI_CraftingUI_Quantity": "Quantidade:",
+	"IGUI_CraftingUI_TimeRequired": "Tempo necessário:",
+	"IGUI_CraftingUI_Minutes": "min",
+	"IGUI_CraftingUI_Seconds": "s",
+	"IGUI_CraftingUI_Max": "MÁX",
+	"IGUI_CraftingUI_ForceAction": "Forçar",
+	"IGUI_CraftingUI_Liters": "L"
 }

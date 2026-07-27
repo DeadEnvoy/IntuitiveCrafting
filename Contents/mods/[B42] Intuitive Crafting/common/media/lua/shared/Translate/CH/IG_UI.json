@@ -46,5 +46,13 @@
 	"IGUI_CraftingUI_HasMaterials_tooltip": "僅顯示您至少擁有一項所需物品的配方。",
 
 	"IGUI_CraftingUI_GrantsXP": "獲得經驗",
-	"IGUI_CraftingUI_GrantsXP_tooltip": "僅顯示可獲得角色技能經驗值的配方。"
+	"IGUI_CraftingUI_GrantsXP_tooltip": "僅顯示可獲得角色技能經驗值的配方。",
+
+	"IGUI_CraftingUI_Quantity": "數量：",
+	"IGUI_CraftingUI_TimeRequired": "所需時間：",
+	"IGUI_CraftingUI_Minutes": "分",
+	"IGUI_CraftingUI_Seconds": "秒",
+	"IGUI_CraftingUI_Max": "最大",
+	"IGUI_CraftingUI_ForceAction": "強制",
+	"IGUI_CraftingUI_Liters": "L"
 }

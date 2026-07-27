@@ -46,5 +46,13 @@
 	"IGUI_CraftingUI_HasMaterials_tooltip": "Show only recipes for which you have at least one of the required items.",
 	
 	"IGUI_CraftingUI_GrantsXP": "Grants XP",
-	"IGUI_CraftingUI_GrantsXP_tooltip": "Show only recipes that grant experience points for character skills."
+	"IGUI_CraftingUI_GrantsXP_tooltip": "Show only recipes that grant experience points for character skills.",
+
+	"IGUI_CraftingUI_Quantity": "Quantity:",
+	"IGUI_CraftingUI_TimeRequired": "Time Required:",
+	"IGUI_CraftingUI_Minutes": "m",
+	"IGUI_CraftingUI_Seconds": "s",
+	"IGUI_CraftingUI_Max": "MAX",
+	"IGUI_CraftingUI_ForceAction": "Force Action",
+	"IGUI_CraftingUI_Liters": "L"
 }

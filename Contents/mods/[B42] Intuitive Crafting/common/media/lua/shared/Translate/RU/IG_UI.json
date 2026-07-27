@@ -46,5 +46,13 @@
 	"IGUI_CraftingUI_HasMaterials_tooltip": "Отображать рецепты, где у персонажа есть хотя бы один необходимый предмет.",
 	
 	"IGUI_CraftingUI_GrantsXP": "Даёт опыт", 
-	"IGUI_CraftingUI_GrantsXP_tooltip": "Отображать рецепты, позволяющие получить очки опыта в навыках персонажа."
+	"IGUI_CraftingUI_GrantsXP_tooltip": "Отображать рецепты, позволяющие получить очки опыта в навыках персонажа.",
+
+	"IGUI_CraftingUI_Quantity": "Кол-во:",
+	"IGUI_CraftingUI_TimeRequired": "Требуемое время:",
+	"IGUI_CraftingUI_Minutes": "мин.",
+	"IGUI_CraftingUI_Seconds": "сек.",
+	"IGUI_CraftingUI_Max": "МАКС",
+	"IGUI_CraftingUI_ForceAction": "Принудительно",
+	"IGUI_CraftingUI_Liters": "л."
 }

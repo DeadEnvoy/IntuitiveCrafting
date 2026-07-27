@@ -46,5 +46,13 @@
 	"IGUI_CraftingUI_HasMaterials_tooltip": "Zeigt nur Rezepte an, für die Sie mindestens einen der erforderlichen Gegenstände besitzen.",
 
 	"IGUI_CraftingUI_GrantsXP": "Gibt EP",
-	"IGUI_CraftingUI_GrantsXP_tooltip": "Zeigt nur Rezepte an, die Erfahrungspunkte für Charakterfähigkeiten gewähren."
+	"IGUI_CraftingUI_GrantsXP_tooltip": "Zeigt nur Rezepte an, die Erfahrungspunkte für Charakterfähigkeiten gewähren.",
+
+	"IGUI_CraftingUI_Quantity": "Menge:",
+	"IGUI_CraftingUI_TimeRequired": "Benötigte Zeit:",
+	"IGUI_CraftingUI_Minutes": "Min.",
+	"IGUI_CraftingUI_Seconds": "Sek.",
+	"IGUI_CraftingUI_Max": "MAX",
+	"IGUI_CraftingUI_ForceAction": "Erzwingen",
+	"IGUI_CraftingUI_Liters": "L"
 }

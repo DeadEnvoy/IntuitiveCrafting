@@ -46,5 +46,13 @@
 	"IGUI_CraftingUI_HasMaterials_tooltip": "필요한 아이템을 하나 이상 가지고 있는 레시피만 표시합니다.",
 
 	"IGUI_CraftingUI_GrantsXP": "경험치 획득",
-	"IGUI_CraftingUI_GrantsXP_tooltip": "캐릭터 기술에 대한 경험치를 얻을 수 있는 레시피만 표시합니다."
+	"IGUI_CraftingUI_GrantsXP_tooltip": "캐릭터 기술에 대한 경험치를 얻을 수 있는 레시피만 표시합니다.",
+
+	"IGUI_CraftingUI_Quantity": "수량:",
+	"IGUI_CraftingUI_TimeRequired": "소요 시간:",
+	"IGUI_CraftingUI_Minutes": "분",
+	"IGUI_CraftingUI_Seconds": "초",
+	"IGUI_CraftingUI_Max": "최대",
+	"IGUI_CraftingUI_ForceAction": "강제",
+	"IGUI_CraftingUI_Liters": "L"
 }

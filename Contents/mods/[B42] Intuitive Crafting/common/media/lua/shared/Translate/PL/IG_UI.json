@@ -46,5 +46,13 @@
 	"IGUI_CraftingUI_HasMaterials_tooltip": "Pokazuj tylko przepisy, do których masz co najmniej jeden wymagany przedmiot.",
 
 	"IGUI_CraftingUI_GrantsXP": "Daje XP",
-	"IGUI_CraftingUI_GrantsXP_tooltip": "Pokazuj tylko przepisy, które dają punkty doświadczenia."
+	"IGUI_CraftingUI_GrantsXP_tooltip": "Pokazuj tylko przepisy, które dają punkty doświadczenia.",
+
+	"IGUI_CraftingUI_Quantity": "Ilość:",
+	"IGUI_CraftingUI_TimeRequired": "Wymagany czas:",
+	"IGUI_CraftingUI_Minutes": "min",
+	"IGUI_CraftingUI_Seconds": "s",
+	"IGUI_CraftingUI_Max": "MAX",
+	"IGUI_CraftingUI_ForceAction": "Wymuś",
+	"IGUI_CraftingUI_Liters": "L"
 }

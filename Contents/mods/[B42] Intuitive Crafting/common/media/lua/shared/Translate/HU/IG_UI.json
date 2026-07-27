@@ -46,5 +46,13 @@
 	"IGUI_CraftingUI_HasMaterials_tooltip": "Csak azokat a recepteket mutassa, amelyekhez van legalább egy hozzávalód.",
 
 	"IGUI_CraftingUI_GrantsXP": "XP-t ad",
-	"IGUI_CraftingUI_GrantsXP_tooltip": "Csak azokat a recepteket mutassa, amelyek tapasztalati pontot adnak."
+	"IGUI_CraftingUI_GrantsXP_tooltip": "Csak azokat a recepteket mutassa, amelyek tapasztalati pontot adnak.",
+
+	"IGUI_CraftingUI_Quantity": "Mennyiség:",
+	"IGUI_CraftingUI_TimeRequired": "Szükséges idő:",
+	"IGUI_CraftingUI_Minutes": "p",
+	"IGUI_CraftingUI_Seconds": "mp",
+	"IGUI_CraftingUI_Max": "MAX",
+	"IGUI_CraftingUI_ForceAction": "Kényszerítés",
+	"IGUI_CraftingUI_Liters": "L"
 }

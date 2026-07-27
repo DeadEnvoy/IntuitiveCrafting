@@ -46,5 +46,13 @@
 	"IGUI_CraftingUI_HasMaterials_tooltip": "Sadece gerekli eşyalardan en az birine sahip olduğunuz tarifleri göster.",
 
 	"IGUI_CraftingUI_GrantsXP": "XP Verir",
-	"IGUI_CraftingUI_GrantsXP_tooltip": "Sadece karakter yetenekleri için deneyim puanı kazandıran tarifleri göster."
+	"IGUI_CraftingUI_GrantsXP_tooltip": "Sadece karakter yetenekleri için deneyim puanı kazandıran tarifleri göster.",
+
+	"IGUI_CraftingUI_Quantity": "Miktar:",
+	"IGUI_CraftingUI_TimeRequired": "Gereken süre:",
+	"IGUI_CraftingUI_Minutes": "dk",
+	"IGUI_CraftingUI_Seconds": "sn",
+	"IGUI_CraftingUI_Max": "MAKS",
+	"IGUI_CraftingUI_ForceAction": "Zorla",
+	"IGUI_CraftingUI_Liters": "L"
 }
