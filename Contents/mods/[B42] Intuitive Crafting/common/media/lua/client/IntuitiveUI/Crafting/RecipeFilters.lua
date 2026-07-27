@@ -1,4 +1,3 @@
-require "IntuitiveUI/RecipeCategories"
 require "Entity/ISUI/BuildRecipe/ISBuildPanel"
 require "Entity/ISUI/CraftRecipe/ISWidgetRecipeFilterPanel"
 
@@ -20,8 +19,8 @@ local original_ISHandCraftPanel_new = ISHandCraftPanel.new
 function ISHandCraftPanel:new(x, y, width, height, player, craftBench, isoObject, recipeQuery)
     local o = original_ISHandCraftPanel_new(self, x, y, width, height, player, craftBench, isoObject, recipeQuery)
 
-    o.filterShowLearned = self.filterShowLearned ~= false  -- default: true
-    o.filterHasMaterials = self.filterHasMaterials == true  -- default: false
+    o.filterShowLearned = self.filterShowLearned ~= false -- default: true
+    o.filterHasMaterials = self.filterHasMaterials == true -- default: false
     o.filterGrantsXP = self.filterGrantsXP == true -- default: false
 
     return o
@@ -84,12 +83,12 @@ function ISWidgetRecipeFilterPanel:calculateLayout(_preferredWidth, _preferredHe
         local showLearnedVisW = getVisualWidth(self.tickBoxShowLearned)
         local hasMaterialsVisW = getVisualWidth(self.tickBoxHasMaterials)
         local grantsXPVisW = getVisualWidth(self.tickBoxGrantsXP)
-        
+
         local sortPartWidth = 0
         if self.sortComboLabel and self.sortComboLabel:isVisible() then
-             sortPartWidth = self.width - self.sortComboLabel:getX()
+            sortPartWidth = self.width - self.sortComboLabel:getX()
         elseif self.sortCombo and self.sortCombo:isVisible() then
-             sortPartWidth = self.width - self.sortCombo:getX()
+            sortPartWidth = self.width - self.sortCombo:getX()
         end
         if sortPartWidth <= 0 then sortPartWidth = 200 end
 
@@ -110,10 +109,10 @@ function ISWidgetRecipeFilterPanel:calculateLayout(_preferredWidth, _preferredHe
             local sortH = self.sortCombo:getHeight()
             local targetH = alignTarget:getHeight()
             local sortY = self.sortCombo:getY()
-            
+
             y = sortY + (sortH / 2) - (targetH / 2)
         end
-        
+
         alignTarget:setY(y)
         alignTarget:setWidth(getVisualWidth(alignTarget))
 
@@ -133,7 +132,7 @@ function ISWidgetRecipeFilterPanel:calculateLayout(_preferredWidth, _preferredHe
         self.tickBoxGrantsXP:setY(y)
         self.tickBoxGrantsXP:setWidth(getVisualWidth(self.tickBoxGrantsXP))
     end
-    
+
     local maxY = 0
     for _, child in pairs(self.children) do
         if child:isVisible() then
@@ -223,14 +222,14 @@ local function applyRecipeFilters(self, _recipeList)
         local recipesToKeep = {}
         local totalCount = allRecipes:size()
         local player = self.player
-        
+
         local availableTypes = {}
         if self.filterHasMaterials then
             local containers = ISInventoryPaneContextMenu.getContainers(player)
-            for i=0, containers:size()-1 do
+            for i = 0, containers:size() - 1 do
                 local container = containers:get(i)
                 local items = container:getItems()
-                for j=0, items:size()-1 do
+                for j = 0, items:size() - 1 do
                     local item = items:get(j)
                     if not item:isEquipped() then
                         availableTypes[item:getFullType()] = true
@@ -239,7 +238,7 @@ local function applyRecipeFilters(self, _recipeList)
             end
         end
 
-        for i=0, totalCount-1 do
+        for i = 0, totalCount - 1 do
             local recipe = allRecipes:get(i)
             if recipe then
                 local failed = false
@@ -250,7 +249,7 @@ local function applyRecipeFilters(self, _recipeList)
                     end
 
                     if not failed then
-                        for j=0, recipe:getRequiredSkillCount()-1 do
+                        for j = 0, recipe:getRequiredSkillCount() - 1 do
                             local skill = recipe:getRequiredSkill(j)
                             if player:getPerkLevel(skill:getPerk()) < skill:getLevel() then
                                 failed = true
@@ -263,11 +262,11 @@ local function applyRecipeFilters(self, _recipeList)
                 if not failed and self.filterHasMaterials then
                     local found = false
                     local inputs = recipe:getInputs()
-                    for j=0, inputs:size()-1 do
+                    for j = 0, inputs:size() - 1 do
                         local input = inputs:get(j)
                         if not input:isAutomationOnly() then
                             local possibleItems = input:getPossibleInputItems()
-                            for k=0, possibleItems:size()-1 do
+                            for k = 0, possibleItems:size() - 1 do
                                 local scriptItem = possibleItems:get(k)
                                 if availableTypes[scriptItem:getFullName()] then
                                     found = true
@@ -305,12 +304,12 @@ local function applyRecipeFilters(self, _recipeList)
         end
 
         local nodes = collection:getNodes()
-        for i=0, nodes:size()-1 do
+        for i = 0, nodes:size() - 1 do
             local node = nodes:get(i)
             if node:getType() == CraftRecipeListNode.CraftRecipeListNodeType.GROUP then
                 local shouldExpand = false
                 local children = node:getChildren()
-                for j=0, children:size()-1 do
+                for j = 0, children:size() - 1 do
                     local child = children:get(j)
                     if child:getRecipe() == selectedRecipe then
                         shouldExpand = true
