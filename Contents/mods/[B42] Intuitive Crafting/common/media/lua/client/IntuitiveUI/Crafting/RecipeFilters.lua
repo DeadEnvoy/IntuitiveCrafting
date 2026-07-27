@@ -70,6 +70,9 @@ function ISWidgetRecipeFilterPanel:createChildren()
         table.insert(row, self.tickBoxShowLearned)
         table.insert(row, self.tickBoxHasMaterials)
         table.insert(row, self.tickBoxGrantsXP)
+        table.insert(self.allJoypadButtons, self.tickBoxShowLearned)
+        table.insert(self.allJoypadButtons, self.tickBoxHasMaterials)
+        table.insert(self.allJoypadButtons, self.tickBoxGrantsXP)
     end
 end
 
