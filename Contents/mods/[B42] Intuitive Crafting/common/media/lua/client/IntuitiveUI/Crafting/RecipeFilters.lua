@@ -67,6 +67,10 @@ function ISWidgetRecipeFilterPanel:createChildren()
 
     if self.joypadButtonsY and #self.joypadButtonsY > 0 then
         local row = self.joypadButtonsY[#self.joypadButtonsY]
+        if self.tickBoxShowAllVersion and not luautils.tableContains(self.allJoypadButtons, self.tickBoxShowAllVersion) then
+            table.insert(row, self.tickBoxShowAllVersion)
+            table.insert(self.allJoypadButtons, self.tickBoxShowAllVersion)
+        end
         table.insert(row, self.tickBoxShowLearned)
         table.insert(row, self.tickBoxHasMaterials)
         table.insert(row, self.tickBoxGrantsXP)
