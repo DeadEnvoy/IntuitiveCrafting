@@ -15,7 +15,7 @@
 
 **TECHNICAL**
 - The changelog format was updated to Markdown.
-- B42.13 - B42.19 support has been discontinued.
+- B42.13 - B42.18 support has been discontinued.
 
 # 1.0.2
 - Experience gain for recipes is now displayed again.
