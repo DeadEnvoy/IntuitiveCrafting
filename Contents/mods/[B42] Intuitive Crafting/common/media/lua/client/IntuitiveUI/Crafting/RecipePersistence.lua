@@ -1,4 +1,3 @@
-require "IntuitiveUI/RecipeFilters"
 require "Entity/ISUI/CraftRecipe/ISRecipeScrollingListBox"
 require "Entity/ISUI/CraftRecipe/ISWidgetRecipesPanel"
 
