@@ -175,7 +175,7 @@ end
 
 -- Some mods I ran into reassign these functions on OnGameStart, which breaks Intuitive Crafting, so this patching is needed
 
-local originals = {
+local modOverrides = {
     ISWidgetHandCraftControl_createChildren = ISWidgetHandCraftControl.createChildren,
     ISWidgetHandCraftControl_prerender = ISWidgetHandCraftControl.prerender,
     ISWidgetInput_createScriptValues = ISWidgetInput.createScriptValues,
@@ -186,14 +186,14 @@ local originals = {
 
 local original_OpenHandcraftWindow = ISEntityUI.OpenHandcraftWindow
 function ISEntityUI.OpenHandcraftWindow(_player, _isoObject, _queryOverride, _ignoreFindSurface, recipe, itemString)
-    ISWidgetHandCraftControl.createChildren = originals.ISWidgetHandCraftControl_createChildren
-    ISWidgetHandCraftControl.prerender = originals.ISWidgetHandCraftControl_prerender
+    ISWidgetHandCraftControl.createChildren = modOverrides.ISWidgetHandCraftControl_createChildren
+    ISWidgetHandCraftControl.prerender = modOverrides.ISWidgetHandCraftControl_prerender
 
-    ISWidgetInput.createScriptValues = originals.ISWidgetInput_createScriptValues
-    ISWidgetInput.updateScriptValues = originals.ISWidgetInput_updateScriptValues
+    ISWidgetInput.createScriptValues = modOverrides.ISWidgetInput_createScriptValues
+    ISWidgetInput.updateScriptValues = modOverrides.ISWidgetInput_updateScriptValues
 
-    ISWidgetOutput.createScriptValues = originals.ISWidgetOutput_createScriptValues
-    ISWidgetOutput.updateScriptValues = originals.ISWidgetOutput_updateScriptValues
+    ISWidgetOutput.createScriptValues = modOverrides.ISWidgetOutput_createScriptValues
+    ISWidgetOutput.updateScriptValues = modOverrides.ISWidgetOutput_updateScriptValues
 
     return original_OpenHandcraftWindow(_player, _isoObject, _queryOverride, _ignoreFindSurface, recipe, itemString)
 end

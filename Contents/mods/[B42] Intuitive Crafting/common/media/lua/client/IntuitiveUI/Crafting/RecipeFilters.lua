@@ -41,6 +41,10 @@ local original_createChildren = ISWidgetRecipeFilterPanel.createChildren
 function ISWidgetRecipeFilterPanel:createChildren()
     original_createChildren(self)
 
+    if not (self.showAllRecipeTickBox or self.tickBoxShowAllVersion) then
+        return
+    end
+
     self.tickBoxShowLearned = ISXuiSkin.build(self.xuiSkin, "S_NeedsAStyle", ISTickBox, 0, 0, BUTTON_HGT, BUTTON_HGT, "tickbox", self, ISWidgetRecipeFilterPanel.onShowLearnedClick)
     self.tickBoxShowLearned:initialise()
     self.tickBoxShowLearned:instantiate()
@@ -150,64 +154,37 @@ function ISWidgetRecipeFilterPanel:calculateLayout(_preferredWidth, _preferredHe
     self:setHeight(maxY + UI_BORDER_SPACING)
 end
 
-function ISWidgetRecipeFilterPanel:onShowLearnedClick(clickedOption, enabled)
-    if self.callbackTarget then
-        self.callbackTarget.filterShowLearned = enabled
+local function applyFilterToggle(self, fieldName, enabled)
+    local target = self.callbackTarget
+    if not target then return end
 
-        if self.callbackTarget.Type == "ISHandCraftPanel" then
-            ISHandCraftPanel.filterShowLearned = enabled
-        elseif self.callbackTarget.Type == "ISBuildPanel" then
-            ISBuildPanel.filterShowLearned = enabled
-        end
+    target[fieldName] = enabled
 
-        if self.callbackTarget.refreshRecipeList then
-            self.callbackTarget:refreshRecipeList(true)
-        elseif self.callbackTarget.refreshList then
-            self.callbackTarget:refreshList(true)
-        end
-
-        self.callbackTarget:filterRecipeList()
+    if target.Type == "ISHandCraftPanel" then
+        ISHandCraftPanel[fieldName] = enabled
+    elseif target.Type == "ISBuildPanel" then
+        ISBuildPanel[fieldName] = enabled
     end
+
+    if target.refreshRecipeList then
+        target:refreshRecipeList(true)
+    elseif target.refreshList then
+        target:refreshList(true)
+    end
+
+    target:filterRecipeList()
+end
+
+function ISWidgetRecipeFilterPanel:onShowLearnedClick(clickedOption, enabled)
+    applyFilterToggle(self, "filterShowLearned", enabled)
 end
 
 function ISWidgetRecipeFilterPanel:onHasMaterialsClick(clickedOption, enabled)
-    if self.callbackTarget then
-        self.callbackTarget.filterHasMaterials = enabled
-
-        if self.callbackTarget.Type == "ISHandCraftPanel" then
-            ISHandCraftPanel.filterHasMaterials = enabled
-        elseif self.callbackTarget.Type == "ISBuildPanel" then
-            ISBuildPanel.filterHasMaterials = enabled
-        end
-
-        if self.callbackTarget.refreshRecipeList then
-            self.callbackTarget:refreshRecipeList(true)
-        elseif self.callbackTarget.refreshList then
-            self.callbackTarget:refreshList(true)
-        end
-
-        self.callbackTarget:filterRecipeList()
-    end
+    applyFilterToggle(self, "filterHasMaterials", enabled)
 end
 
 function ISWidgetRecipeFilterPanel:onGrantsXPClick(clickedOption, enabled)
-    if self.callbackTarget then
-        self.callbackTarget.filterGrantsXP = enabled
-
-        if self.callbackTarget.Type == "ISHandCraftPanel" then
-            ISHandCraftPanel.filterGrantsXP = enabled
-        elseif self.callbackTarget.Type == "ISBuildPanel" then
-            ISBuildPanel.filterGrantsXP = enabled
-        end
-
-        if self.callbackTarget.refreshRecipeList then
-            self.callbackTarget:refreshRecipeList(true)
-        elseif self.callbackTarget.refreshList then
-            self.callbackTarget:refreshList(true)
-        end
-
-        self.callbackTarget:filterRecipeList()
-    end
+    applyFilterToggle(self, "filterGrantsXP", enabled)
 end
 
 local function isRecipeShowLearned(logic, player, craftRecipe)
